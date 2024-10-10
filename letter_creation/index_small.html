@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+    body{
+        margin-top: 100px;
+        --button_size: 20px;
+        --button_border: 1px;
+        --max_div_height: 42px;
+    }
+    button{
+        padding: var(--button_size) var(--button_size) var(--button_size) var(--button_size);
+        margin: None;
+        border-width: var(--button_border);
+        background-color: antiquewhite;
+    }
+    .button_div{
+        padding-top: None;
+        margin-top: None;
+        max-height: var(--max_div_height);
+    }
+    .container{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: fit-content;
+        min-height: fit-content;
+    }
+    .container > *{
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .btns_div{
+        margin-bottom: 20px;
+    }
+    #cnf{
+        margin-top: 5px;
+        padding: 5px 20px 5px 20px;
+    }
+    #cpy{
+        margin-top: 5px;
+        padding: 20px 30px 20px 30px;
+    }
+    #output{
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+</style>
+<body id="body">
+    
+    <div class="container">
+        <div class="btns_div">
+
+        </div>
+
+        <button id="cpy"><b>Copy</b></button>
+        <button id="cnf"><b>Confirm</b></button>
+        <b><p id="output0">0x00000000</p></b>
+        <b><p id="output1">0x00000000</p></b>
+        <b><p id="output2">0x00000000</p></b>
+        <b><p id="output3">0x00000000</p></b>
+        <p>
+            <input type="text" class="input">
+            <button id="inp"><b>Input</b></button>
+        </p>
+    </div>
+<script src="main_small.js"></script>
+</body>
+</html>

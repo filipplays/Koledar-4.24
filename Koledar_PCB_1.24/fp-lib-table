@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Koledar v3.24_b133dedffeba4d40a528b75812ea59d5")(type "KiCad")(uri "$(KIPRJMOD)/Koledar v3.24_b133dedffeba4d40a528b75812ea59d5.pretty")(options "")(descr ""))
+)

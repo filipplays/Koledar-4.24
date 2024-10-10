@@ -1,0 +1,60 @@
+/**
+ * @file chars.h
+ * @author Filip Zevnik
+ * @brief This file contains all of the available character to display, Formated in 32 bit integers.
+ * @version 4.24
+ * @date 2024-07-26
+ *
+ *
+ */
+
+#ifndef chars_h
+#define chars_h
+
+const uint32_t zero[4] = {0x3c37f8fc, 0x303c0f83, 0x307c0f03, 0x0fc7fb0f};
+const uint32_t one[4] = {0x03f0f838, 0x0300c033, 0x0300c030, 0x3ffffc30};
+const uint32_t two[4] = {0x3077f8fc, 0x380c0303, 0x0071f9f8, 0x3ffffc03};
+const uint32_t three[4] = {0x3837fcfe, 0x0f070380, 0x380700f0, 0x1fefff83};
+const uint32_t four[4] = {0x303c0f03, 0x303c0f03, 0x300ffbff, 0x300c0300};
+const uint32_t five[4] = {0x003fffff, 0x1fe3fc03, 0x300c0380, 0x0fe7ff83};
+const uint32_t six[4] = {0x303ffdfe, 0x1ff00c03, 0x303e0fff, 0x1fefff07};
+const uint32_t seven[4] = {0x303ffdff, 0x0e070380, 0x01c0e070, 0x00301c0e};
+const uint32_t eight[4] = {0x303ffdfe, 0x1fec0f03, 0x303c0dfe, 0x1fefff03};
+const uint32_t nine[4] = {0x303ffdfe, 0x3ffc0f03, 0x300c03fe, 0x1fefff03};
+
+const uint32_t a[4] = {0x1863f078, 0x303c0f03, 0x303fffff, 0x303c0f03};
+const uint32_t b[4] = {0x303ffdff, 0x1ffc0f03, 0x303c0dff, 0x1fffff03};
+const uint32_t c[4] = {0x3877f8fc, 0x00300f03, 0x30300c03, 0x0fc7fb87};
+const uint32_t ch[4] = {0x0fc000fc, 0x303e1dfe, 0x30300c03, 0x0fc7fb87};
+const uint32_t d[4] = {0x3837fcff, 0x303c0f03, 0x303c0f03, 0x0ff7ff83};
+const uint32_t e[4] = {0x003fffff, 0x07f00c03, 0x00300c7f, 0x3ffffc03};
+const uint32_t f[4] = {0x003fffff, 0x07f00c03, 0x00300c7f, 0x00300c03};
+const uint32_t g[4] = {0x303ffdfe, 0x00300c03, 0x303fcdf3, 0x1fefff03};
+const uint32_t h[4] = {0x303c0f03, 0x3ffc0f03, 0x303c0fff, 0x303c0f03};
+const uint32_t i[4] = {0x030fffff, 0x0300c030, 0x0300c030, 0x3ffffc30};
+const uint32_t j[4] = {0x300fe3f8, 0x300c0300, 0x303c0f00, 0x0fc7fb87};
+const uint32_t k[4] = {0x0e370f83, 0x01f0ec73, 0x0e31cc3f, 0x303e0dc3};
+const uint32_t l[4] = {0x00300c03, 0x00300c03, 0x00300c03, 0x3ffffc03};
+const uint32_t m[4] = {0x3cfe1f03, 0x303ccf7b, 0x303c0f03, 0x303c0f03};
+const uint32_t n[4] = {0x30fc3f07, 0x333c6f1b, 0x363d8f33, 0x383f0fc3};
+const uint32_t o[4] = {0x3877f8fc, 0x303c0f03, 0x303c0f03, 0x0fc7fb87};
+const uint32_t p[4] = {0x303ffdff, 0x3ffc0f03, 0x00300dff, 0x00300c03};
+const uint32_t q[4] = {0x3877f8fc, 0x303c0f03, 0x1f3dcf03, 0x37cff9c7};
+const uint32_t r[4] = {0x303ffdff, 0x3ffc0f03, 0x0e31cdff, 0x303e0dc3};
+const uint32_t s[4] = {0x303ff9fc, 0x0ff00c03, 0x300e01fe, 0x1fefff03};
+const uint32_t sh[4] = {0x1fe00078, 0x003c0fff, 0x300ff8ff, 0x1fefff03};
+const uint32_t t[4] = {0x030fffff, 0x0300c030, 0x0300c030, 0x0300c030};
+const uint32_t u[4] = {0x303c0f03, 0x303c0f03, 0x303c0f03, 0x0fc7fb87};
+const uint32_t v[4] = {0x303c0f03, 0x303c0f03, 0x1cee1f03, 0x0301e0fc};
+const uint32_t w[4] = {0x303c0f03, 0x333c0f03, 0x3cffff7b, 0x303c0f87};
+const uint32_t x[4] = {0x3cfe1f03, 0x0783f1fe, 0x1fe3f078, 0x303e1fcf};
+const uint32_t y[4] = {0x303c0f03, 0x1cee1f03, 0x0301e0fc, 0x0300c030};
+const uint32_t z[4] = {0x300fffff, 0x0e070380, 0x01c0e070, 0x3ffffc0e};
+const uint32_t zh[4] = {0x3ff0007c, 0x0e0703ff, 0x01c0e070, 0x3ffffc0e};
+
+const uint32_t dash[4] = {0x00000000, 0x1fe3f000, 0x0003f1fe, 0x00000000};
+const uint32_t empty[4] = {0x00000000, 0x00000000, 0x00000000, 0x00000000};
+const uint32_t stop[4] = {0x00000000, 0x00000000, 0x00c00000, 0x00c0781e};
+const uint32_t colon[4] = {0x0780c000, 0x0000c078, 0x0780c000, 0x0000c078};
+
+#endif
