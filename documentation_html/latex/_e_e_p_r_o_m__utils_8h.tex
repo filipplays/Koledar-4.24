@@ -1,0 +1,132 @@
+\doxysection{EEPROM\+\_\+utils.\+h File Reference}
+\hypertarget{_e_e_p_r_o_m__utils_8h}{}\label{_e_e_p_r_o_m__utils_8h}\index{EEPROM\_utils.h@{EEPROM\_utils.h}}
+
+
+The functions that store and load from the EEPROM.  
+
+
+{\ttfamily \#include "{}BD.\+h"{}}\newline
+Include dependency graph for EEPROM\+\_\+utils.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{_e_e_p_r_o_m__utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{_e_e_p_r_o_m__utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_aebb7cfcb5cfa5eea287cf873e087bde0}{BD\+\_\+\+SIZE}}~0x1C
+\item 
+\#define \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_a58ac24176d742443f1efa8d724ae70a7}{BD\+\_\+\+OFFSET}}~0x08
+\item 
+\#define \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_aa4fbb342291ca23a81109ed9d532f6c7}{TO\+\_\+\+ADR}}(ind)~(ind \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_aebb7cfcb5cfa5eea287cf873e087bde0}{BD\+\_\+\+SIZE}}) + \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_a58ac24176d742443f1efa8d724ae70a7}{BD\+\_\+\+OFFSET}}
+\item 
+\#define \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_a17196556c1aaec96a0638c102ad59ad8}{READ\+\_\+\+BD}}(bd,  \mbox{\hyperlink{chars_8h_a774bd386b2a37ea7accfee8e7552f717}{i}})~EEPROM.\+get(\mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_aa4fbb342291ca23a81109ed9d532f6c7}{TO\+\_\+\+ADR}}(\mbox{\hyperlink{chars_8h_a774bd386b2a37ea7accfee8e7552f717}{i}}), bd);
+\begin{DoxyCompactList}\small\item\em Used to read a \doxylink{class_b_d}{BD} object from memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_a8393458ea3e1fcda16d1b85949a8b9fd}{v\+Save\+\_\+byte}} (uint8\+\_\+t by\+Save, uint8\+\_\+t by\+Index)
+\begin{DoxyCompactList}\small\item\em Saves a byte of data to an index (0 -\/-\/\texorpdfstring{$>$}{>} 7) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_adfbba7f9755a3e7ac675caf08df29b0b}{v\+Read\+\_\+byte}} (uint8\+\_\+t by\+Index)
+\begin{DoxyCompactList}\small\item\em Read a byte of data from an index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_a127ae61eaf06bf0b1e354a2cfde1f1b9}{v\+Init\+\_\+bytes}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the background and text color and the brightness of the display from the EEPROM value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The functions that store and load from the EEPROM. 
+
+\begin{DoxyAuthor}{Author}
+Filip Zevnik 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+4.\+24 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/07-\/26
+\end{DoxyDate}
+The memory map is available in the documentation. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_e_e_p_r_o_m__utils_8h_a58ac24176d742443f1efa8d724ae70a7}\index{EEPROM\_utils.h@{EEPROM\_utils.h}!BD\_OFFSET@{BD\_OFFSET}}
+\index{BD\_OFFSET@{BD\_OFFSET}!EEPROM\_utils.h@{EEPROM\_utils.h}}
+\doxysubsubsection{\texorpdfstring{BD\_OFFSET}{BD\_OFFSET}}
+{\footnotesize\ttfamily \label{_e_e_p_r_o_m__utils_8h_a58ac24176d742443f1efa8d724ae70a7} 
+\#define BD\+\_\+\+OFFSET~0x08}
+
+\Hypertarget{_e_e_p_r_o_m__utils_8h_aebb7cfcb5cfa5eea287cf873e087bde0}\index{EEPROM\_utils.h@{EEPROM\_utils.h}!BD\_SIZE@{BD\_SIZE}}
+\index{BD\_SIZE@{BD\_SIZE}!EEPROM\_utils.h@{EEPROM\_utils.h}}
+\doxysubsubsection{\texorpdfstring{BD\_SIZE}{BD\_SIZE}}
+{\footnotesize\ttfamily \label{_e_e_p_r_o_m__utils_8h_aebb7cfcb5cfa5eea287cf873e087bde0} 
+\#define BD\+\_\+\+SIZE~0x1C}
+
+\Hypertarget{_e_e_p_r_o_m__utils_8h_a17196556c1aaec96a0638c102ad59ad8}\index{EEPROM\_utils.h@{EEPROM\_utils.h}!READ\_BD@{READ\_BD}}
+\index{READ\_BD@{READ\_BD}!EEPROM\_utils.h@{EEPROM\_utils.h}}
+\doxysubsubsection{\texorpdfstring{READ\_BD}{READ\_BD}}
+{\footnotesize\ttfamily \label{_e_e_p_r_o_m__utils_8h_a17196556c1aaec96a0638c102ad59ad8} 
+\#define READ\+\_\+\+BD(\begin{DoxyParamCaption}\item[{}]{bd}{, }\item[{}]{\mbox{\hyperlink{chars_8h_a774bd386b2a37ea7accfee8e7552f717}{i}}}{}\end{DoxyParamCaption})~EEPROM.\+get(\mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_aa4fbb342291ca23a81109ed9d532f6c7}{TO\+\_\+\+ADR}}(\mbox{\hyperlink{chars_8h_a774bd386b2a37ea7accfee8e7552f717}{i}}), bd);}
+
+
+
+Used to read a \doxylink{class_b_d}{BD} object from memory. 
+
+\Hypertarget{_e_e_p_r_o_m__utils_8h_aa4fbb342291ca23a81109ed9d532f6c7}\index{EEPROM\_utils.h@{EEPROM\_utils.h}!TO\_ADR@{TO\_ADR}}
+\index{TO\_ADR@{TO\_ADR}!EEPROM\_utils.h@{EEPROM\_utils.h}}
+\doxysubsubsection{\texorpdfstring{TO\_ADR}{TO\_ADR}}
+{\footnotesize\ttfamily \label{_e_e_p_r_o_m__utils_8h_aa4fbb342291ca23a81109ed9d532f6c7} 
+\#define TO\+\_\+\+ADR(\begin{DoxyParamCaption}\item[{}]{ind}{}\end{DoxyParamCaption})~(ind \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_aebb7cfcb5cfa5eea287cf873e087bde0}{BD\+\_\+\+SIZE}}) + \mbox{\hyperlink{_e_e_p_r_o_m__utils_8h_a58ac24176d742443f1efa8d724ae70a7}{BD\+\_\+\+OFFSET}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_e_e_p_r_o_m__utils_8h_a127ae61eaf06bf0b1e354a2cfde1f1b9}\index{EEPROM\_utils.h@{EEPROM\_utils.h}!vInit\_bytes@{vInit\_bytes}}
+\index{vInit\_bytes@{vInit\_bytes}!EEPROM\_utils.h@{EEPROM\_utils.h}}
+\doxysubsubsection{\texorpdfstring{vInit\_bytes()}{vInit\_bytes()}}
+{\footnotesize\ttfamily \label{_e_e_p_r_o_m__utils_8h_a127ae61eaf06bf0b1e354a2cfde1f1b9} 
+void v\+Init\+\_\+bytes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the background and text color and the brightness of the display from the EEPROM value. 
+
+\Hypertarget{_e_e_p_r_o_m__utils_8h_adfbba7f9755a3e7ac675caf08df29b0b}\index{EEPROM\_utils.h@{EEPROM\_utils.h}!vRead\_byte@{vRead\_byte}}
+\index{vRead\_byte@{vRead\_byte}!EEPROM\_utils.h@{EEPROM\_utils.h}}
+\doxysubsubsection{\texorpdfstring{vRead\_byte()}{vRead\_byte()}}
+{\footnotesize\ttfamily \label{_e_e_p_r_o_m__utils_8h_adfbba7f9755a3e7ac675caf08df29b0b} 
+uint8\+\_\+t v\+Read\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Read a byte of data from an index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+Index} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_e_e_p_r_o_m__utils_8h_a8393458ea3e1fcda16d1b85949a8b9fd}\index{EEPROM\_utils.h@{EEPROM\_utils.h}!vSave\_byte@{vSave\_byte}}
+\index{vSave\_byte@{vSave\_byte}!EEPROM\_utils.h@{EEPROM\_utils.h}}
+\doxysubsubsection{\texorpdfstring{vSave\_byte()}{vSave\_byte()}}
+{\footnotesize\ttfamily \label{_e_e_p_r_o_m__utils_8h_a8393458ea3e1fcda16d1b85949a8b9fd} 
+void v\+Save\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Save}{, }\item[{uint8\+\_\+t}]{by\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Saves a byte of data to an index (0 -\/-\/\texorpdfstring{$>$}{>} 7) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+Save} & \\
+\hline
+{\em by\+Index} & \\
+\hline
+\end{DoxyParams}

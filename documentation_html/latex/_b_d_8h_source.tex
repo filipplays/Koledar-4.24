@@ -1,0 +1,43 @@
+\doxysection{BD.\+h}
+\hypertarget{_b_d_8h_source}{}\label{_b_d_8h_source}\mbox{\hyperlink{_b_d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ birthday\_h}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ birthday\_h}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MAX\_DAYS\_TILL\_BD\ 10}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ CTABLE\_LEN\ 32}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ INVALID\ CTABLE\_LEN\ -\/\ 2}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ FIRST\_YEAR\ 1900}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{_b_d_8h_a01ca261ec75acd09c4c70df356de7905}{acTable}}[\mbox{\hyperlink{_b_d_8h_a4d52a174480e024c821f8620464589eb}{CTABLE\_LEN}}]\ =\ \textcolor{stringliteral}{"{}abc\(\backslash\)1defghijklmnopqrs\(\backslash\)2tuvwxyz\(\backslash\)3\ ."{}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_b_d}{BD}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \textcolor{comment}{//\ 5\ bits\ per\ character\ for\ 40\ characters\ =\ 200\ bits\ or\ 25\ bytes}}
+\DoxyCodeLine{00035\ \ \ uint8\_t\ \mbox{\hyperlink{class_b_d_a9a3e70ffcbe9067f7e8eddd86c84b556}{abyName\_surname}}[25];}
+\DoxyCodeLine{00036\ \ \ uint8\_t\ \mbox{\hyperlink{class_b_d_a38e300f8a605222e7cb65ae4276cd3ce}{byDay}},\ \mbox{\hyperlink{class_b_d_aaf4090ac3573d1eac1b0c8cdfe67eee2}{byMonth}},\ \mbox{\hyperlink{class_b_d_a831c625768d864b8a1c4724216277344}{byYear}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \mbox{\hyperlink{class_b_d_aa805d8b1abbc7c84d261e171dae29661}{BD}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{class_b_d_a9a3e70ffcbe9067f7e8eddd86c84b556}{abyName\_surname}},\ uint8\_t\ \mbox{\hyperlink{class_b_d_a38e300f8a605222e7cb65ae4276cd3ce}{byDay}},\ uint8\_t\ \mbox{\hyperlink{class_b_d_aaf4090ac3573d1eac1b0c8cdfe67eee2}{byMonth}},\ uint8\_t\ \mbox{\hyperlink{class_b_d_a831c625768d864b8a1c4724216277344}{byYear}});}
+\DoxyCodeLine{00052\ \ \ \mbox{\hyperlink{class_b_d_ac6f47a6204399a8a929b47ea7b0d2923}{BD}}();}
+\DoxyCodeLine{00059\ \ \ \mbox{\hyperlink{class_b_d}{BD}}\ \mbox{\hyperlink{class_b_d_aa689e3985a437f8ff78ffb6325e4b24a}{operator=}}(\mbox{\hyperlink{class_b_d}{BD}}\ *BD\_Add);}
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_b_d_a3339b8cf2317fe55ac19d106aaff72de}{vCopy}}(uint8\_t\ \mbox{\hyperlink{class_b_d_a9a3e70ffcbe9067f7e8eddd86c84b556}{abyName\_surname}}[25],\ uint8\_t\ \mbox{\hyperlink{class_b_d_a38e300f8a605222e7cb65ae4276cd3ce}{byDay}},\ uint8\_t\ \mbox{\hyperlink{class_b_d_aaf4090ac3573d1eac1b0c8cdfe67eee2}{byMonth}},\ uint8\_t\ \mbox{\hyperlink{class_b_d_a831c625768d864b8a1c4724216277344}{byYear}});}
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_b_d_aa89526f296417898ca597f8338755cb2}{vFormat}}(\textcolor{keywordtype}{char}\ *sOut);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_b_d_a1e313f7462957f1dc31825e6b4e4eb9c}{vFormat\_alternative}}(\textcolor{keywordtype}{char}\ *sOut);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_b_d_ab425ec4b09e0db0c1bcfebd121227e89}{vDecode\_name\_surname}}(\textcolor{keywordtype}{char}\ *sOut\_string);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00100\ \ \ uint16\_t\ \mbox{\hyperlink{class_b_d_aa8b2939459219b05ccd4aac4b3fd2885}{wDays\_till\_BD}}(uint8\_t\ \mbox{\hyperlink{class_b_d_a38e300f8a605222e7cb65ae4276cd3ce}{byDay}},\ uint8\_t\ \mbox{\hyperlink{class_b_d_aaf4090ac3573d1eac1b0c8cdfe67eee2}{byMonth}},\ uint16\_t\ wYear);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_b_d_a021a2abc9db1d7c4207e442247f2b47d}{vSave\_BD}}(uint8\_t\ byIndex);}
+\DoxyCodeLine{00110\ \};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00118\ int8\_t\ \mbox{\hyperlink{_b_d_8h_aa56f52a2043a4c8872da3729e4312bb1}{cElementIndex}}(\textcolor{keywordtype}{char}\ cEl);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

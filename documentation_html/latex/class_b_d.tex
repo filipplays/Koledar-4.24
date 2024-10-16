@@ -1,0 +1,235 @@
+\doxysection{BD Class Reference}
+\hypertarget{class_b_d}{}\label{class_b_d}\index{BD@{BD}}
+
+
+This is the class that stores one persons information for the purpose of displaying their birthday.  
+
+
+
+
+{\ttfamily \#include $<$BD.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_d_aa805d8b1abbc7c84d261e171dae29661}{BD}} (const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_b_d_a9a3e70ffcbe9067f7e8eddd86c84b556}{aby\+Name\+\_\+surname}}, uint8\+\_\+t \mbox{\hyperlink{class_b_d_a38e300f8a605222e7cb65ae4276cd3ce}{by\+Day}}, uint8\+\_\+t \mbox{\hyperlink{class_b_d_aaf4090ac3573d1eac1b0c8cdfe67eee2}{by\+Month}}, uint8\+\_\+t \mbox{\hyperlink{class_b_d_a831c625768d864b8a1c4724216277344}{by\+Year}})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_b_d}{BD} object using the encoded name and surname byte array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_d_ac6f47a6204399a8a929b47ea7b0d2923}{BD}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_b_d}{BD} object with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_d}{BD}} \mbox{\hyperlink{class_b_d_aa689e3985a437f8ff78ffb6325e4b24a}{operator=}} (\mbox{\hyperlink{class_b_d}{BD}} \texorpdfstring{$\ast$}{*}BD\+\_\+\+Add)
+\begin{DoxyCompactList}\small\item\em Used to copy one \doxylink{class_b_d}{BD} object to another. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_a3339b8cf2317fe55ac19d106aaff72de}{v\+Copy}} (uint8\+\_\+t \mbox{\hyperlink{class_b_d_a9a3e70ffcbe9067f7e8eddd86c84b556}{aby\+Name\+\_\+surname}}\mbox{[}25\mbox{]}, uint8\+\_\+t \mbox{\hyperlink{class_b_d_a38e300f8a605222e7cb65ae4276cd3ce}{by\+Day}}, uint8\+\_\+t \mbox{\hyperlink{class_b_d_aaf4090ac3573d1eac1b0c8cdfe67eee2}{by\+Month}}, uint8\+\_\+t \mbox{\hyperlink{class_b_d_a831c625768d864b8a1c4724216277344}{by\+Year}})
+\begin{DoxyCompactList}\small\item\em Copies the \doxylink{class_b_d}{BD} objects values into the given vars. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_aa89526f296417898ca597f8338755cb2}{v\+Format}} (char \texorpdfstring{$\ast$}{*}s\+Out)
+\begin{DoxyCompactList}\small\item\em Formats the encoded name and surname along with the date information and calculated age and saves it to the s\+Out paramater string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_a1e313f7462957f1dc31825e6b4e4eb9c}{v\+Format\+\_\+alternative}} (char \texorpdfstring{$\ast$}{*}s\+Out)
+\begin{DoxyCompactList}\small\item\em Provides an alternative data formatting method that is used for sending the data to the KOLEDAR GUI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_ab425ec4b09e0db0c1bcfebd121227e89}{v\+Decode\+\_\+name\+\_\+surname}} (char \texorpdfstring{$\ast$}{*}s\+Out\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Decodes and returns the name and surname into the paramater variables. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_b_d_aa8b2939459219b05ccd4aac4b3fd2885}{w\+Days\+\_\+till\+\_\+\+BD}} (uint8\+\_\+t \mbox{\hyperlink{class_b_d_a38e300f8a605222e7cb65ae4276cd3ce}{by\+Day}}, uint8\+\_\+t \mbox{\hyperlink{class_b_d_aaf4090ac3573d1eac1b0c8cdfe67eee2}{by\+Month}}, uint16\+\_\+t w\+Year)
+\begin{DoxyCompactList}\small\item\em Calculates the difference between the birtday date and the current day in days. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_a021a2abc9db1d7c4207e442247f2b47d}{v\+Save\+\_\+\+BD}} (uint8\+\_\+t by\+Index)
+\begin{DoxyCompactList}\small\item\em Used for saving the \doxylink{class_b_d}{BD} class object to the EEPROM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_b_d_a9a3e70ffcbe9067f7e8eddd86c84b556}{aby\+Name\+\_\+surname}} \mbox{[}25\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_b_d_a38e300f8a605222e7cb65ae4276cd3ce}{by\+Day}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_b_d_aaf4090ac3573d1eac1b0c8cdfe67eee2}{by\+Month}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_b_d_a831c625768d864b8a1c4724216277344}{by\+Year}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the class that stores one persons information for the purpose of displaying their birthday. 
+
+The name and surname are stored in a 25 B long array, because each letter only uses 5 bits of data. This possible because I need to encode less than 32 characters. The data is sent to the calendar by the Koledar GUI in the encoded form and is decoded as needed by the v\+Format member function. The age is an 8 bit integer and is converted to the correct year of birth by adding it to the "{}\+FIRST\+\_\+\+YEAR"{} macro which means that the lowest a year of birth could be is FIRST\+\_\+\+YEAR and the highest is FIRST\+\_\+\+YEAR + 255. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_b_d_aa805d8b1abbc7c84d261e171dae29661}\index{BD@{BD}!BD@{BD}}
+\index{BD@{BD}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{BD()}{BD()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_b_d_aa805d8b1abbc7c84d261e171dae29661} 
+BD\+::\+BD (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{aby\+Name\+\_\+surname}{, }\item[{uint8\+\_\+t}]{by\+Day}{, }\item[{uint8\+\_\+t}]{by\+Month}{, }\item[{uint8\+\_\+t}]{by\+Year}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_b_d}{BD} object using the encoded name and surname byte array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aby\+Name\+\_\+surname} & \\
+\hline
+{\em by\+Day} & \\
+\hline
+{\em by\+Month} & \\
+\hline
+{\em by\+Year} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_d_ac6f47a6204399a8a929b47ea7b0d2923}\index{BD@{BD}!BD@{BD}}
+\index{BD@{BD}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{BD()}{BD()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_b_d_ac6f47a6204399a8a929b47ea7b0d2923} 
+BD\+::\+BD (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_b_d}{BD} object with default values. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_d_aa689e3985a437f8ff78ffb6325e4b24a}\index{BD@{BD}!operator=@{operator=}}
+\index{operator=@{operator=}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_b_d_aa689e3985a437f8ff78ffb6325e4b24a} 
+\mbox{\hyperlink{class_b_d}{BD}} BD\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_d}{BD}} \texorpdfstring{$\ast$}{*}}]{BD\+\_\+\+Add}{}\end{DoxyParamCaption})}
+
+
+
+Used to copy one \doxylink{class_b_d}{BD} object to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em BD\+\_\+\+Add} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_b_d}{BD} 
+\end{DoxyReturn}
+\Hypertarget{class_b_d_a3339b8cf2317fe55ac19d106aaff72de}\index{BD@{BD}!vCopy@{vCopy}}
+\index{vCopy@{vCopy}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{vCopy()}{vCopy()}}
+{\footnotesize\ttfamily \label{class_b_d_a3339b8cf2317fe55ac19d106aaff72de} 
+void BD\+::v\+Copy (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{aby\+Name\+\_\+surname}{\mbox{[}25\mbox{]}, }\item[{uint8\+\_\+t}]{by\+Day}{, }\item[{uint8\+\_\+t}]{by\+Month}{, }\item[{uint8\+\_\+t}]{by\+Year}{}\end{DoxyParamCaption})}
+
+
+
+Copies the \doxylink{class_b_d}{BD} objects values into the given vars. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aby\+Name\+\_\+surname} & \\
+\hline
+{\em by\+Day} & \\
+\hline
+{\em by\+Month} & \\
+\hline
+{\em by\+Year} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_d_ab425ec4b09e0db0c1bcfebd121227e89}\index{BD@{BD}!vDecode\_name\_surname@{vDecode\_name\_surname}}
+\index{vDecode\_name\_surname@{vDecode\_name\_surname}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{vDecode\_name\_surname()}{vDecode\_name\_surname()}}
+{\footnotesize\ttfamily \label{class_b_d_ab425ec4b09e0db0c1bcfebd121227e89} 
+void BD\+::v\+Decode\+\_\+name\+\_\+surname (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{s\+Out\+\_\+string}{}\end{DoxyParamCaption})}
+
+
+
+Decodes and returns the name and surname into the paramater variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Out\+\_\+string} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_d_aa89526f296417898ca597f8338755cb2}\index{BD@{BD}!vFormat@{vFormat}}
+\index{vFormat@{vFormat}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{vFormat()}{vFormat()}}
+{\footnotesize\ttfamily \label{class_b_d_aa89526f296417898ca597f8338755cb2} 
+void BD\+::v\+Format (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{s\+Out}{}\end{DoxyParamCaption})}
+
+
+
+Formats the encoded name and surname along with the date information and calculated age and saves it to the s\+Out paramater string. 
+
+The s\+Out char array should be maximum 58 B long.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Out} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_d_a1e313f7462957f1dc31825e6b4e4eb9c}\index{BD@{BD}!vFormat\_alternative@{vFormat\_alternative}}
+\index{vFormat\_alternative@{vFormat\_alternative}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{vFormat\_alternative()}{vFormat\_alternative()}}
+{\footnotesize\ttfamily \label{class_b_d_a1e313f7462957f1dc31825e6b4e4eb9c} 
+void BD\+::v\+Format\+\_\+alternative (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{s\+Out}{}\end{DoxyParamCaption})}
+
+
+
+Provides an alternative data formatting method that is used for sending the data to the KOLEDAR GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Out} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_d_a021a2abc9db1d7c4207e442247f2b47d}\index{BD@{BD}!vSave\_BD@{vSave\_BD}}
+\index{vSave\_BD@{vSave\_BD}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{vSave\_BD()}{vSave\_BD()}}
+{\footnotesize\ttfamily \label{class_b_d_a021a2abc9db1d7c4207e442247f2b47d} 
+void BD\+::v\+Save\+\_\+\+BD (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Used for saving the \doxylink{class_b_d}{BD} class object to the EEPROM. 
+
+Param by\+Index should be higher than -\/1 and less than 146.
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+Index} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_d_aa8b2939459219b05ccd4aac4b3fd2885}\index{BD@{BD}!wDays\_till\_BD@{wDays\_till\_BD}}
+\index{wDays\_till\_BD@{wDays\_till\_BD}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{wDays\_till\_BD()}{wDays\_till\_BD()}}
+{\footnotesize\ttfamily \label{class_b_d_aa8b2939459219b05ccd4aac4b3fd2885} 
+uint16\+\_\+t BD\+::w\+Days\+\_\+till\+\_\+\+BD (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Day}{, }\item[{uint8\+\_\+t}]{by\+Month}{, }\item[{uint16\+\_\+t}]{w\+Year}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the difference between the birtday date and the current day in days. 
+
+This function is used to know when to display the birthday on the display.
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_b_d_a9a3e70ffcbe9067f7e8eddd86c84b556}\index{BD@{BD}!abyName\_surname@{abyName\_surname}}
+\index{abyName\_surname@{abyName\_surname}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{abyName\_surname}{abyName\_surname}}
+{\footnotesize\ttfamily \label{class_b_d_a9a3e70ffcbe9067f7e8eddd86c84b556} 
+uint8\+\_\+t BD\+::aby\+Name\+\_\+surname\mbox{[}25\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_b_d_a38e300f8a605222e7cb65ae4276cd3ce}\index{BD@{BD}!byDay@{byDay}}
+\index{byDay@{byDay}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{byDay}{byDay}}
+{\footnotesize\ttfamily \label{class_b_d_a38e300f8a605222e7cb65ae4276cd3ce} 
+uint8\+\_\+t BD\+::by\+Day\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_b_d_aaf4090ac3573d1eac1b0c8cdfe67eee2}\index{BD@{BD}!byMonth@{byMonth}}
+\index{byMonth@{byMonth}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{byMonth}{byMonth}}
+{\footnotesize\ttfamily \label{class_b_d_aaf4090ac3573d1eac1b0c8cdfe67eee2} 
+uint8\+\_\+t BD\+::by\+Month\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_b_d_a831c625768d864b8a1c4724216277344}\index{BD@{BD}!byYear@{byYear}}
+\index{byYear@{byYear}!BD@{BD}}
+\doxysubsubsection{\texorpdfstring{byYear}{byYear}}
+{\footnotesize\ttfamily \label{class_b_d_a831c625768d864b8a1c4724216277344} 
+uint8\+\_\+t BD\+::by\+Year\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_b_d_8h}{BD.\+h}}\end{DoxyCompactItemize}

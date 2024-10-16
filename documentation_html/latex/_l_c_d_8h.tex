@@ -1,0 +1,431 @@
+\doxysection{LCD.\+h File Reference}
+\hypertarget{_l_c_d_8h}{}\label{_l_c_d_8h}\index{LCD.h@{LCD.h}}
+
+
+The functions used to manipulate the display.  
+
+
+{\ttfamily \#include "{}BD.\+h"{}}\newline
+{\ttfamily \#include "{}EEPROM\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}dates.\+h"{}}\newline
+Include dependency graph for LCD.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{_l_c_d_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_a28bd3ae95a5c2a176ef4c272a534ae2b}{CHAR\+\_\+\+ROWS}}~12
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_a66814db04dc4b5478ffa874c8298b24d}{CHAR\+\_\+\+COLS}}~10
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_a978f43ee5e134a203bd868ebb5aa8c91}{SPACEING}}~2
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_a9bc56da5459c7fa67681016463ed3654}{DISPLAY\+\_\+\+ON\+\_\+\+TIME\+\_\+\+MS}}~5000
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_a8bcb55e0cdb23fe47fedcec69d44b96f}{DISPLAY\+\_\+\+OFF\+\_\+\+HOUR}}~20
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8h_a7144f90ca59544bff582a0200bdca4ed}{DISPLAY\+\_\+\+ON\+\_\+\+HOUR}}~8
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_l_c_d_8h_a55eea53c986cd704327848ec81765248}{v\+Char\+\_\+stroke}} (const uint32\+\_\+t adw\+Char\mbox{[}4\mbox{]}, uint16\+\_\+t x\+Pos, uint16\+\_\+t y\+Pos)
+\begin{DoxyCompactList}\small\item\em Used to display a character from the \doxylink{chars_8h}{chars.\+h} file by stroking its outline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_af9c730bece4dbc226fae2edab6b0ed8c}{v\+Char\+\_\+fill}} (const uint32\+\_\+t adw\+Char\mbox{[}4\mbox{]}, uint16\+\_\+t x\+Pos, uint16\+\_\+t y\+Pos)
+\begin{DoxyCompactList}\small\item\em Used to display a character from the \doxylink{chars_8h}{chars.\+h} file by using filled rectangles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_ae8feaba9d915073a5ae8b5fb5aac5e4d}{v\+Display\+\_\+char}} (char c\+Char, uint16\+\_\+t x\+Pos, uint16\+\_\+t y\+Pos)
+\begin{DoxyCompactList}\small\item\em Used to display a single char. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_ae5eb22561e30de3338139cfceb61810f}{v\+Display\+\_\+string}} (const char \texorpdfstring{$\ast$}{*}ps\+\_\+\+Str, uint8\+\_\+t by\+Str\+\_\+len, uint16\+\_\+t x\+Pos, uint16\+\_\+t y\+Pos, uint8\+\_\+t by\+Delay\+\_\+ms=0)
+\begin{DoxyCompactList}\small\item\em Displays a string on the screen using the characters from the \doxylink{chars_8h}{chars.\+h} file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_a9cae1aa8b0720d8178e369d712515dbc}{v\+Set\+\_\+string\+\_\+dims}} (const char \texorpdfstring{$\ast$}{*}ps\+\_\+\+Str, uint8\+\_\+t by\+Str\+\_\+len, uint16\+\_\+t \texorpdfstring{$\ast$}{*}x\+Start, uint16\+\_\+t \texorpdfstring{$\ast$}{*}y\+Start, uint16\+\_\+t x\+Limit, uint16\+\_\+t y\+Limit, uint8\+\_\+t by\+Max\+\_\+text\+\_\+size=255)
+\begin{DoxyCompactList}\small\item\em Used to determine the correct size and position of the text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_aacf7b4c0b5d79540f626023d54c89787}{v\+Display\+\_\+date}} (uint8\+\_\+t by\+Day, uint8\+\_\+t by\+Month, uint16\+\_\+t w\+Year)
+\begin{DoxyCompactList}\small\item\em Used to display the desired date at the bottom of the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_aeb124f48d0c01dcc14e0c79f4c157d19}{v\+Main\+\_\+screen}} (uint8\+\_\+t by\+Day, uint8\+\_\+t by\+Month, uint16\+\_\+t w\+Year, uint8\+\_\+t by\+Hour, uint8\+\_\+t by\+Minute, \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\+\_\+digit}} e\+Update\+\_\+num=\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259ab1d5eac4b1dca480c8056eaea7663b7a}{ALL}})
+\begin{DoxyCompactList}\small\item\em Used to display the main screen of the chalendar, without any birthdays. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_acf80d1b7585c8eb18fe088174cf2a390}{v\+BD\+\_\+screen}} (uint8\+\_\+t by\+Day, uint8\+\_\+t by\+Month, uint16\+\_\+t w\+Year, uint8\+\_\+t by\+Hour, uint8\+\_\+t by\+Minute, \mbox{\hyperlink{class_b_d}{BD}} \texorpdfstring{$\ast$}{*}a\+BD\+\_\+\+BDs, uint8\+\_\+t by\+BD\+\_\+num=1, \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\+\_\+digit}} e\+Update\+\_\+num=\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259ab1d5eac4b1dca480c8056eaea7663b7a}{ALL}})
+\begin{DoxyCompactList}\small\item\em Used to display the birthday screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_a7eecf7c31684113a8d9db2793652b746}{v\+Waiting\+\_\+for\+\_\+\+GPS\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Used to display informative text stating that the device is waiting for GPS signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_a21c922dc60586ce016e9520568c21d8d}{v\+Display\+\_\+night\+\_\+mode}} (uint8\+\_\+t by\+Hour)
+\begin{DoxyCompactList}\small\item\em Turns the display backlight off depending on the time of day. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_a8bfc3d2df9ce402d3777978b68e9b4c9}{v\+Pick\+\_\+screen}} (\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\+\_\+digit}} e\+Update\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Choses the correct screen and displays it based on the birthdays saved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_a7e13e3aebece6462da6981152d9bd8f8}{v\+Display\+\_\+no\+\_\+\+GPS}} ()
+\begin{DoxyCompactList}\small\item\em Displays a small text in the bottom left corner saying that the GPS is not connected indicating that the systems is running of its own timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_a4f5dec82c39ee9fcad7d8cac9f72bed0}{v\+Display\+\_\+\+ON\+\_\+\+IRQ}} ()
+\begin{DoxyCompactList}\small\item\em Used for turning on the display after it was turned on for a set amount of time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_a8f0520beec9088dc39a440b2ca462596}{v\+ON\+\_\+\+OFF\+\_\+fade}} (uint8\+\_\+t b\+Direction)
+\begin{DoxyCompactList}\small\item\em Used to fadein and fade out the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d_8h_a4b40f70dec32436b86e7b7aef0a3ed20}{v\+Display\+\_\+example\+\_\+screen}} (uint8\+\_\+t by\+Day, uint8\+\_\+t by\+Month, uint16\+\_\+t w\+Year, uint8\+\_\+t by\+Hour, uint8\+\_\+t by\+Minute)
+\begin{DoxyCompactList}\small\item\em Display an example screen to show the new configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \mbox{\hyperlink{_l_c_d_8h_a975ff604284a4de2f0d28ac110089edf}{c\+\_\+ac\+Week\+\_\+days}} \mbox{[}7\mbox{]}\mbox{[}11\mbox{]} = \{\{"{}sobota"{}\}, \{"{}nedelja"{}\}, \{"{}ponedeljek"{}\}, \{"{}torek"{}\}, \{"{}sreda"{}\}, \{"{}\textbackslash{}1etrtek"{}\}, \{"{}petek"{}\}\}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{_l_c_d_8h_a3b8d21049ad384ea4f631286d76c179d}{c\+\_\+by\+Week\+\_\+days\+\_\+len}} \mbox{[}7\mbox{]} = \{6, 7, 10, 5, 5, 7, 5\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The functions used to manipulate the display. 
+
+\begin{DoxyAuthor}{Author}
+Filip Zevnik 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+4.\+24 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/07-\/26
+\end{DoxyDate}
+All of the functions used to display characters or string to the display use the g\+\_\+by\+Text\+\_\+size global variable for font size. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_l_c_d_8h_a66814db04dc4b5478ffa874c8298b24d}\index{LCD.h@{LCD.h}!CHAR\_COLS@{CHAR\_COLS}}
+\index{CHAR\_COLS@{CHAR\_COLS}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{CHAR\_COLS}{CHAR\_COLS}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a66814db04dc4b5478ffa874c8298b24d} 
+\#define CHAR\+\_\+\+COLS~10}
+
+\Hypertarget{_l_c_d_8h_a28bd3ae95a5c2a176ef4c272a534ae2b}\index{LCD.h@{LCD.h}!CHAR\_ROWS@{CHAR\_ROWS}}
+\index{CHAR\_ROWS@{CHAR\_ROWS}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{CHAR\_ROWS}{CHAR\_ROWS}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a28bd3ae95a5c2a176ef4c272a534ae2b} 
+\#define CHAR\+\_\+\+ROWS~12}
+
+\Hypertarget{_l_c_d_8h_a8bcb55e0cdb23fe47fedcec69d44b96f}\index{LCD.h@{LCD.h}!DISPLAY\_OFF\_HOUR@{DISPLAY\_OFF\_HOUR}}
+\index{DISPLAY\_OFF\_HOUR@{DISPLAY\_OFF\_HOUR}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_OFF\_HOUR}{DISPLAY\_OFF\_HOUR}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a8bcb55e0cdb23fe47fedcec69d44b96f} 
+\#define DISPLAY\+\_\+\+OFF\+\_\+\+HOUR~20}
+
+\Hypertarget{_l_c_d_8h_a7144f90ca59544bff582a0200bdca4ed}\index{LCD.h@{LCD.h}!DISPLAY\_ON\_HOUR@{DISPLAY\_ON\_HOUR}}
+\index{DISPLAY\_ON\_HOUR@{DISPLAY\_ON\_HOUR}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_ON\_HOUR}{DISPLAY\_ON\_HOUR}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a7144f90ca59544bff582a0200bdca4ed} 
+\#define DISPLAY\+\_\+\+ON\+\_\+\+HOUR~8}
+
+\Hypertarget{_l_c_d_8h_a9bc56da5459c7fa67681016463ed3654}\index{LCD.h@{LCD.h}!DISPLAY\_ON\_TIME\_MS@{DISPLAY\_ON\_TIME\_MS}}
+\index{DISPLAY\_ON\_TIME\_MS@{DISPLAY\_ON\_TIME\_MS}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_ON\_TIME\_MS}{DISPLAY\_ON\_TIME\_MS}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a9bc56da5459c7fa67681016463ed3654} 
+\#define DISPLAY\+\_\+\+ON\+\_\+\+TIME\+\_\+\+MS~5000}
+
+\Hypertarget{_l_c_d_8h_a978f43ee5e134a203bd868ebb5aa8c91}\index{LCD.h@{LCD.h}!SPACEING@{SPACEING}}
+\index{SPACEING@{SPACEING}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{SPACEING}{SPACEING}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a978f43ee5e134a203bd868ebb5aa8c91} 
+\#define SPACEING~2}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_l_c_d_8h_acf80d1b7585c8eb18fe088174cf2a390}\index{LCD.h@{LCD.h}!vBD\_screen@{vBD\_screen}}
+\index{vBD\_screen@{vBD\_screen}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vBD\_screen()}{vBD\_screen()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_acf80d1b7585c8eb18fe088174cf2a390} 
+void v\+BD\+\_\+screen (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Day}{, }\item[{uint8\+\_\+t}]{by\+Month}{, }\item[{uint16\+\_\+t}]{w\+Year}{, }\item[{uint8\+\_\+t}]{by\+Hour}{, }\item[{uint8\+\_\+t}]{by\+Minute}{, }\item[{\mbox{\hyperlink{class_b_d}{BD}} \texorpdfstring{$\ast$}{*}}]{a\+BD\+\_\+\+BDs}{, }\item[{uint8\+\_\+t}]{by\+BD\+\_\+num}{ = {\ttfamily 1}, }\item[{\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\+\_\+digit}}}]{e\+Update\+\_\+num}{ = {\ttfamily \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259ab1d5eac4b1dca480c8056eaea7663b7a}{ALL}}}}\end{DoxyParamCaption})}
+
+
+
+Used to display the birthday screen. 
+
+The chalendar can display up to three birthdays that are spread evenly among the available space. 
+\begin{DoxyParams}{Parameters}
+{\em by\+Day} & \\
+\hline
+{\em by\+Month} & \\
+\hline
+{\em w\+Year} & \\
+\hline
+{\em by\+Hour} & \\
+\hline
+{\em by\+Minute} & \\
+\hline
+{\em a\+BD\+\_\+\+BDs} & An array of initialized \doxylink{class_b_d}{BD} class objects. \\
+\hline
+{\em by\+BD\+\_\+num} & The number of \doxylink{class_b_d}{BD} objects to be displayed that are stored in the a\+BD\+\_\+\+BDs array. \\
+\hline
+{\em e\+Update\+\_\+num} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_af9c730bece4dbc226fae2edab6b0ed8c}\index{LCD.h@{LCD.h}!vChar\_fill@{vChar\_fill}}
+\index{vChar\_fill@{vChar\_fill}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vChar\_fill()}{vChar\_fill()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_af9c730bece4dbc226fae2edab6b0ed8c} 
+void v\+Char\+\_\+fill (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{adw\+Char}{\mbox{[}4\mbox{]}, }\item[{uint16\+\_\+t}]{x\+Pos}{, }\item[{uint16\+\_\+t}]{y\+Pos}{}\end{DoxyParamCaption})}
+
+
+
+Used to display a character from the \doxylink{chars_8h}{chars.\+h} file by using filled rectangles. 
+
+The g\+\_\+by\+Text\+\_\+size global variable is used to determine the size of the font.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adw\+Char} & A variable from the \doxylink{chars_8h}{chars.\+h} file. \\
+\hline
+{\em x\+Pos} & The x position of the top-\/left part of the char. \\
+\hline
+{\em y\+Pos} & The y position of the top-\/left part of the char. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a55eea53c986cd704327848ec81765248}\index{LCD.h@{LCD.h}!vChar\_stroke@{vChar\_stroke}}
+\index{vChar\_stroke@{vChar\_stroke}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vChar\_stroke()}{vChar\_stroke()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a55eea53c986cd704327848ec81765248} 
+void v\+Char\+\_\+stroke (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{adw\+Char}{\mbox{[}4\mbox{]}, }\item[{uint16\+\_\+t}]{x\+Pos}{, }\item[{uint16\+\_\+t}]{y\+Pos}{}\end{DoxyParamCaption})}
+
+
+
+Used to display a character from the \doxylink{chars_8h}{chars.\+h} file by stroking its outline. 
+
+The g\+\_\+by\+Text\+\_\+size global variable is used to determine the size of the font.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adw\+Char} & A variable from the \doxylink{chars_8h}{chars.\+h} file. \\
+\hline
+{\em x\+Pos} & The x position of the top-\/left part of the char. \\
+\hline
+{\em y\+Pos} & The y position of the top-\/left part of the char. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_ae8feaba9d915073a5ae8b5fb5aac5e4d}\index{LCD.h@{LCD.h}!vDisplay\_char@{vDisplay\_char}}
+\index{vDisplay\_char@{vDisplay\_char}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vDisplay\_char()}{vDisplay\_char()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_ae8feaba9d915073a5ae8b5fb5aac5e4d} 
+void v\+Display\+\_\+char (\begin{DoxyParamCaption}\item[{char}]{c\+Char}{, }\item[{uint16\+\_\+t}]{x\+Pos}{, }\item[{uint16\+\_\+t}]{y\+Pos}{}\end{DoxyParamCaption})}
+
+
+
+Used to display a single char. 
+
+The g\+\_\+by\+Text\+\_\+size global variable is used to determine the size of the font.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Char} & \\
+\hline
+{\em x\+Pos} & The x position of the top-\/left part of the char. \\
+\hline
+{\em y\+Pos} & The y position of the top-\/left part of the char. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_aacf7b4c0b5d79540f626023d54c89787}\index{LCD.h@{LCD.h}!vDisplay\_date@{vDisplay\_date}}
+\index{vDisplay\_date@{vDisplay\_date}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vDisplay\_date()}{vDisplay\_date()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_aacf7b4c0b5d79540f626023d54c89787} 
+void v\+Display\+\_\+date (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Day}{, }\item[{uint8\+\_\+t}]{by\+Month}{, }\item[{uint16\+\_\+t}]{w\+Year}{}\end{DoxyParamCaption})}
+
+
+
+Used to display the desired date at the bottom of the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+Day} & \\
+\hline
+{\em by\+Month} & \\
+\hline
+{\em w\+Year} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a4b40f70dec32436b86e7b7aef0a3ed20}\index{LCD.h@{LCD.h}!vDisplay\_example\_screen@{vDisplay\_example\_screen}}
+\index{vDisplay\_example\_screen@{vDisplay\_example\_screen}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vDisplay\_example\_screen()}{vDisplay\_example\_screen()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a4b40f70dec32436b86e7b7aef0a3ed20} 
+void v\+Display\+\_\+example\+\_\+screen (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Day}{, }\item[{uint8\+\_\+t}]{by\+Month}{, }\item[{uint16\+\_\+t}]{w\+Year}{, }\item[{uint8\+\_\+t}]{by\+Hour}{, }\item[{uint8\+\_\+t}]{by\+Minute}{}\end{DoxyParamCaption})}
+
+
+
+Display an example screen to show the new configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+Day} & \\
+\hline
+{\em by\+Month} & \\
+\hline
+{\em w\+Year} & \\
+\hline
+{\em by\+Hour} & \\
+\hline
+{\em by\+Minute} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a21c922dc60586ce016e9520568c21d8d}\index{LCD.h@{LCD.h}!vDisplay\_night\_mode@{vDisplay\_night\_mode}}
+\index{vDisplay\_night\_mode@{vDisplay\_night\_mode}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vDisplay\_night\_mode()}{vDisplay\_night\_mode()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a21c922dc60586ce016e9520568c21d8d} 
+void v\+Display\+\_\+night\+\_\+mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Hour}{}\end{DoxyParamCaption})}
+
+
+
+Turns the display backlight off depending on the time of day. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+Hour} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a7e13e3aebece6462da6981152d9bd8f8}\index{LCD.h@{LCD.h}!vDisplay\_no\_GPS@{vDisplay\_no\_GPS}}
+\index{vDisplay\_no\_GPS@{vDisplay\_no\_GPS}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vDisplay\_no\_GPS()}{vDisplay\_no\_GPS()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a7e13e3aebece6462da6981152d9bd8f8} 
+void v\+Display\+\_\+no\+\_\+\+GPS (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Displays a small text in the bottom left corner saying that the GPS is not connected indicating that the systems is running of its own timer. 
+
+\Hypertarget{_l_c_d_8h_a4f5dec82c39ee9fcad7d8cac9f72bed0}\index{LCD.h@{LCD.h}!vDisplay\_ON\_IRQ@{vDisplay\_ON\_IRQ}}
+\index{vDisplay\_ON\_IRQ@{vDisplay\_ON\_IRQ}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vDisplay\_ON\_IRQ()}{vDisplay\_ON\_IRQ()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a4f5dec82c39ee9fcad7d8cac9f72bed0} 
+void v\+Display\+\_\+\+ON\+\_\+\+IRQ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Used for turning on the display after it was turned on for a set amount of time. 
+
+\Hypertarget{_l_c_d_8h_ae5eb22561e30de3338139cfceb61810f}\index{LCD.h@{LCD.h}!vDisplay\_string@{vDisplay\_string}}
+\index{vDisplay\_string@{vDisplay\_string}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vDisplay\_string()}{vDisplay\_string()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_ae5eb22561e30de3338139cfceb61810f} 
+void v\+Display\+\_\+string (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{ps\+\_\+\+Str}{, }\item[{uint8\+\_\+t}]{by\+Str\+\_\+len}{, }\item[{uint16\+\_\+t}]{x\+Pos}{, }\item[{uint16\+\_\+t}]{y\+Pos}{, }\item[{uint8\+\_\+t}]{by\+Delay\+\_\+ms}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Displays a string on the screen using the characters from the \doxylink{chars_8h}{chars.\+h} file. 
+
+The g\+\_\+by\+Text\+\_\+size global variable is used to determine the size of the font.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ps\+\_\+\+Str} & The string to be displayed. \\
+\hline
+{\em by\+Str\+\_\+len} & The length of the string NOT including the termination character. \\
+\hline
+{\em x\+Pos} & The x position of the top-\/left part of the string. \\
+\hline
+{\em y\+Pos} & The y position of the top-\/left part of the string. \\
+\hline
+{\em by\+Delay\+\_\+ms} & How many milliseconds to wait after clearing the are to then draw the text \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_aeb124f48d0c01dcc14e0c79f4c157d19}\index{LCD.h@{LCD.h}!vMain\_screen@{vMain\_screen}}
+\index{vMain\_screen@{vMain\_screen}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vMain\_screen()}{vMain\_screen()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_aeb124f48d0c01dcc14e0c79f4c157d19} 
+void v\+Main\+\_\+screen (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Day}{, }\item[{uint8\+\_\+t}]{by\+Month}{, }\item[{uint16\+\_\+t}]{w\+Year}{, }\item[{uint8\+\_\+t}]{by\+Hour}{, }\item[{uint8\+\_\+t}]{by\+Minute}{, }\item[{\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\+\_\+digit}}}]{e\+Update\+\_\+num}{ = {\ttfamily \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259ab1d5eac4b1dca480c8056eaea7663b7a}{ALL}}}}\end{DoxyParamCaption})}
+
+
+
+Used to display the main screen of the chalendar, without any birthdays. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+Day} & \\
+\hline
+{\em by\+Month} & \\
+\hline
+{\em w\+Year} & \\
+\hline
+{\em by\+Hour} & \\
+\hline
+{\em by\+Minute} & \\
+\hline
+{\em e\+Update\+\_\+num} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a8f0520beec9088dc39a440b2ca462596}\index{LCD.h@{LCD.h}!vON\_OFF\_fade@{vON\_OFF\_fade}}
+\index{vON\_OFF\_fade@{vON\_OFF\_fade}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vON\_OFF\_fade()}{vON\_OFF\_fade()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a8f0520beec9088dc39a440b2ca462596} 
+void v\+ON\+\_\+\+OFF\+\_\+fade (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{b\+Direction}{}\end{DoxyParamCaption})}
+
+
+
+Used to fadein and fade out the display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Direction} & 1 means fade ON and 0 means fade OFF \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a8bfc3d2df9ce402d3777978b68e9b4c9}\index{LCD.h@{LCD.h}!vPick\_screen@{vPick\_screen}}
+\index{vPick\_screen@{vPick\_screen}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vPick\_screen()}{vPick\_screen()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a8bfc3d2df9ce402d3777978b68e9b4c9} 
+void v\+Pick\+\_\+screen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\+\_\+digit}}}]{e\+Update\+\_\+num}{}\end{DoxyParamCaption})}
+
+
+
+Choses the correct screen and displays it based on the birthdays saved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e\+Update\+\_\+num} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a9cae1aa8b0720d8178e369d712515dbc}\index{LCD.h@{LCD.h}!vSet\_string\_dims@{vSet\_string\_dims}}
+\index{vSet\_string\_dims@{vSet\_string\_dims}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vSet\_string\_dims()}{vSet\_string\_dims()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a9cae1aa8b0720d8178e369d712515dbc} 
+void v\+Set\+\_\+string\+\_\+dims (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{ps\+\_\+\+Str}{, }\item[{uint8\+\_\+t}]{by\+Str\+\_\+len}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{x\+Start}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{y\+Start}{, }\item[{uint16\+\_\+t}]{x\+Limit}{, }\item[{uint16\+\_\+t}]{y\+Limit}{, }\item[{uint8\+\_\+t}]{by\+Max\+\_\+text\+\_\+size}{ = {\ttfamily 255}}\end{DoxyParamCaption})}
+
+
+
+Used to determine the correct size and position of the text. 
+
+This function is called before the v\+Display\+\_\+string function to determine the maksimum value of the g\+\_\+by\+Text\+\_\+size variable and the currect x and y start position of the text so that it is centered. The box determening the area where the text should be centered is determined by the initial value of the x\+Start and y\+Start variables for the start of the box, and the x\+Limit and y\+Limit variables for the ends of the box. The desired position is saved into the x\+Start and y\+Start variables and the font size stored in the global g\+\_\+by\+Text\+\_\+size variable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ps\+\_\+\+Str} & The string you want to display. It is passed to the function so it can check for any special characters that may take up more space like "{}Č"{}. \\
+\hline
+{\em by\+Str\+\_\+len} & The length of the sting not including the termination char. \\
+\hline
+{\em x\+Start} & Pointer to the position variable that will be used in the v\+Display\+\_\+string. The value of the variable when it is passed determines the lower limit of where the string should be placed. The value is then changed so that the value if such that the string is centerd in the given area. \\
+\hline
+{\em y\+Start} & Pointer to the position variable that will be used in the v\+Display\+\_\+string. The value of the variable when it is passed determines the lower limit of where the string should be placed. The value is then changed so that the value if such that the string is centerd in the given area. \\
+\hline
+{\em x\+Limit} & The maksimum x position on the display where the string can be displayed. \\
+\hline
+{\em y\+Limit} & The maksimum y position on the display where the string can be displayed. \\
+\hline
+{\em by\+Max\+\_\+text\+\_\+size} & The maximum text size value, used if you want to have an intentionally smaller font size. Defaults to 255. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a7eecf7c31684113a8d9db2793652b746}\index{LCD.h@{LCD.h}!vWaiting\_for\_GPS\_screen@{vWaiting\_for\_GPS\_screen}}
+\index{vWaiting\_for\_GPS\_screen@{vWaiting\_for\_GPS\_screen}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{vWaiting\_for\_GPS\_screen()}{vWaiting\_for\_GPS\_screen()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a7eecf7c31684113a8d9db2793652b746} 
+void v\+Waiting\+\_\+for\+\_\+\+GPS\+\_\+screen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Used to display informative text stating that the device is waiting for GPS signal. 
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_l_c_d_8h_a975ff604284a4de2f0d28ac110089edf}\index{LCD.h@{LCD.h}!c\_acWeek\_days@{c\_acWeek\_days}}
+\index{c\_acWeek\_days@{c\_acWeek\_days}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{c\_acWeek\_days}{c\_acWeek\_days}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a975ff604284a4de2f0d28ac110089edf} 
+const char c\+\_\+ac\+Week\+\_\+days\mbox{[}7\mbox{]}\mbox{[}11\mbox{]} = \{\{"{}sobota"{}\}, \{"{}nedelja"{}\}, \{"{}ponedeljek"{}\}, \{"{}torek"{}\}, \{"{}sreda"{}\}, \{"{}\textbackslash{}1etrtek"{}\}, \{"{}petek"{}\}\}}
+
+\Hypertarget{_l_c_d_8h_a3b8d21049ad384ea4f631286d76c179d}\index{LCD.h@{LCD.h}!c\_byWeek\_days\_len@{c\_byWeek\_days\_len}}
+\index{c\_byWeek\_days\_len@{c\_byWeek\_days\_len}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{c\_byWeek\_days\_len}{c\_byWeek\_days\_len}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a3b8d21049ad384ea4f631286d76c179d} 
+const uint8\+\_\+t c\+\_\+by\+Week\+\_\+days\+\_\+len\mbox{[}7\mbox{]} = \{6, 7, 10, 5, 5, 7, 5\}}
+

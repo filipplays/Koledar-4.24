@@ -1,0 +1,35 @@
+\doxysection{dates.\+h}
+\hypertarget{dates_8h_source}{}\label{dates_8h_source}\mbox{\hyperlink{dates_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ dates\_h}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ dates\_h}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\_digit}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259a26f8ff0cdd909ee179a0ed06adfc4a0b}{MINUTE}},}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259a74ec855bc5a425821f2ecde17a0c4bac}{TWO\_MINUTE}},}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259a79aab2da0ce6d416b78895cf20661b35}{HOUR}},}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259a4618a30a3139b0f3f8943e035a2946fd}{TWO\_HOUR}},}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259ab1d5eac4b1dca480c8056eaea7663b7a}{ALL}}}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{const}\ uint8\_t\ \mbox{\hyperlink{dates_8h_aefbae47a8b59454ca92bdac8764e08d0}{abyMonth\_days\_len}}[12]\ =\ \{31,\ 0,\ 31,\ 30,\ 31,\ 30,\ 31,\ 31,\ 30,\ 31,\ 30,\ 31\};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ uint8\_t\ \mbox{\hyperlink{dates_8h_a8cbf39ede0cfd31ed7d9e7b821fdabd8}{bLeap\_year}}(uint16\_t\ wYear);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00041\ uint8\_t\ \mbox{\hyperlink{dates_8h_abc1f39f536ac34f8e9f2635eea7b2b66}{byDay\_of\_week}}(uint8\_t\ byMonth,\ uint8\_t\ byDay,\ uint16\_t\ wYear);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00053\ uint8\_t\ \mbox{\hyperlink{dates_8h_a3358102b1e43d0958c75c16b6399c736}{bSummer\_time}}(uint16\_t\ wYear,\ uint8\_t\ byMonth,\ uint8\_t\ byDay);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00065\ uint16\_t\ \mbox{\hyperlink{dates_8h_ad82e81f32bca7801597f49f03cf86639}{wDay\_diff}}(uint8\_t\ byBD\_day,\ uint8\_t\ byBD\_month,\ uint8\_t\ byDay,\ uint8\_t\ byMonth,\ uint16\_t\ wYear);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00075\ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\_digit}}\ \mbox{\hyperlink{dates_8h_ab2415801c5e21cbb7ae280d91e8cd0be}{eAdd\_minutes}}(uint8\_t\ byMinutes);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00085\ uint8\_t\ \mbox{\hyperlink{dates_8h_ab85442da01b601dd54eca57f2abbdc96}{byUpdate\_time}}(\textcolor{keyword}{const}\ uint8\_t\ *byTime,\ uint8\_t\ *byP\_time);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dates_8h_a3943937d18a80821c4dc0fa5c887f8ee}{vAdd\_day}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

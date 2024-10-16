@@ -1,0 +1,55 @@
+\doxysection{LCD.\+h}
+\hypertarget{_l_c_d_8h_source}{}\label{_l_c_d_8h_source}\mbox{\hyperlink{_l_c_d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ lcd\_h}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ lcd\_h}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_b_d_8h}{BD.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_e_e_p_r_o_m__utils_8h}{EEPROM\_utils.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dates_8h}{dates.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ CHAR\_ROWS\ 12}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ CHAR\_COLS\ 10}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ SPACEING\ 2}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ DISPLAY\_ON\_TIME\_MS\ 5000}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ DISPLAY\_OFF\_HOUR\ 20}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ DISPLAY\_ON\_HOUR\ 8}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{_l_c_d_8h_a975ff604284a4de2f0d28ac110089edf}{c\_acWeek\_days}}[7][11]\ =\ \{\{\textcolor{stringliteral}{"{}sobota"{}}\},\ \{\textcolor{stringliteral}{"{}nedelja"{}}\},\ \{\textcolor{stringliteral}{"{}ponedeljek"{}}\},\ \{\textcolor{stringliteral}{"{}torek"{}}\},\ \{\textcolor{stringliteral}{"{}sreda"{}}\},\ \{\textcolor{stringliteral}{"{}\(\backslash\)1etrtek"{}}\},\ \{\textcolor{stringliteral}{"{}petek"{}}\}\};}
+\DoxyCodeLine{00029\ \textcolor{keyword}{const}\ uint8\_t\ \mbox{\hyperlink{_l_c_d_8h_a3b8d21049ad384ea4f631286d76c179d}{c\_byWeek\_days\_len}}[7]\ =\ \{6,\ 7,\ 10,\ 5,\ 5,\ 7,\ 5\};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_a55eea53c986cd704327848ec81765248}{vChar\_stroke}}(\textcolor{keyword}{const}\ uint32\_t\ adwChar[4],\ uint16\_t\ xPos,\ uint16\_t\ yPos);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_af9c730bece4dbc226fae2edab6b0ed8c}{vChar\_fill}}(\textcolor{keyword}{const}\ uint32\_t\ adwChar[4],\ uint16\_t\ xPos,\ uint16\_t\ yPos);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_ae8feaba9d915073a5ae8b5fb5aac5e4d}{vDisplay\_char}}(\textcolor{keywordtype}{char}\ cChar,\ uint16\_t\ xPos,\ uint16\_t\ yPos);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_ae5eb22561e30de3338139cfceb61810f}{vDisplay\_string}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *ps\_Str,\ uint8\_t\ byStr\_len,\ uint16\_t\ xPos,\ uint16\_t\ yPos,\ uint8\_t\ byDelay\_ms\ =\ 0);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_a9cae1aa8b0720d8178e369d712515dbc}{vSet\_string\_dims}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *ps\_Str,\ uint8\_t\ byStr\_len,\ uint16\_t\ *xStart,\ uint16\_t\ *yStart,\ uint16\_t\ xLimit,\ uint16\_t\ yLimit,\ uint8\_t\ byMax\_text\_size\ =\ 255);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_aacf7b4c0b5d79540f626023d54c89787}{vDisplay\_date}}(uint8\_t\ byDay,\ uint8\_t\ byMonth,\ uint16\_t\ wYear);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_aeb124f48d0c01dcc14e0c79f4c157d19}{vMain\_screen}}(uint8\_t\ byDay,\ uint8\_t\ byMonth,\ uint16\_t\ wYear,\ uint8\_t\ byHour,\ uint8\_t\ byMinute,\ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\_digit}}\ eUpdate\_num\ =\ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259ab1d5eac4b1dca480c8056eaea7663b7a}{ALL}});}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00137\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_acf80d1b7585c8eb18fe088174cf2a390}{vBD\_screen}}(uint8\_t\ byDay,\ uint8\_t\ byMonth,\ uint16\_t\ wYear,\ uint8\_t\ byHour,\ uint8\_t\ byMinute,\ \mbox{\hyperlink{class_b_d}{BD}}\ *aBD\_BDs,\ uint8\_t\ byBD\_num\ =\ 1,\ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\_digit}}\ eUpdate\_num\ =\ \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259ab1d5eac4b1dca480c8056eaea7663b7a}{ALL}});}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_a7eecf7c31684113a8d9db2793652b746}{vWaiting\_for\_GPS\_screen}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00150\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_a21c922dc60586ce016e9520568c21d8d}{vDisplay\_night\_mode}}(uint8\_t\ byHour);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00157\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_a8bfc3d2df9ce402d3777978b68e9b4c9}{vPick\_screen}}(\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\_digit}}\ eUpdate\_num);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_a7e13e3aebece6462da6981152d9bd8f8}{vDisplay\_no\_GPS}}();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00170\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_a4f5dec82c39ee9fcad7d8cac9f72bed0}{vDisplay\_ON\_IRQ}}();}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_a8f0520beec9088dc39a440b2ca462596}{vON\_OFF\_fade}}(uint8\_t\ bDirection);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00188\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_c_d_8h_a4b40f70dec32436b86e7b7aef0a3ed20}{vDisplay\_example\_screen}}(uint8\_t\ byDay,\ uint8\_t\ byMonth,\ uint16\_t\ wYear,\ uint8\_t\ byHour,\ uint8\_t\ byMinute);}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

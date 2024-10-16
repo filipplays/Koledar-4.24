@@ -1,0 +1,245 @@
+\doxysection{dates.\+h File Reference}
+\hypertarget{dates_8h}{}\label{dates_8h}\index{dates.h@{dates.h}}
+
+
+This file contains all of the functions that are used to operate with the date.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{dates_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\+\_\+digit}} \{ \newline
+\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259a26f8ff0cdd909ee179a0ed06adfc4a0b}{MINUTE}}
+, \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259a74ec855bc5a425821f2ecde17a0c4bac}{TWO\+\_\+\+MINUTE}}
+, \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259a79aab2da0ce6d416b78895cf20661b35}{HOUR}}
+, \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259a4618a30a3139b0f3f8943e035a2946fd}{TWO\+\_\+\+HOUR}}
+, \newline
+\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259ab1d5eac4b1dca480c8056eaea7663b7a}{ALL}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{dates_8h_a8cbf39ede0cfd31ed7d9e7b821fdabd8}{b\+Leap\+\_\+year}} (uint16\+\_\+t w\+Year)
+\begin{DoxyCompactList}\small\item\em Returns 1 if the given year is a leap year and 0 if it is not. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{dates_8h_abc1f39f536ac34f8e9f2635eea7b2b66}{by\+Day\+\_\+of\+\_\+week}} (uint8\+\_\+t by\+Month, uint8\+\_\+t by\+Day, uint16\+\_\+t w\+Year)
+\begin{DoxyCompactList}\small\item\em Returns the day of the week given a date. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{dates_8h_a3358102b1e43d0958c75c16b6399c736}{b\+Summer\+\_\+time}} (uint16\+\_\+t w\+Year, uint8\+\_\+t by\+Month, uint8\+\_\+t by\+Day)
+\begin{DoxyCompactList}\small\item\em Returns a 1 if the given date is in the summer time and 0 if it is not. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{dates_8h_ad82e81f32bca7801597f49f03cf86639}{w\+Day\+\_\+diff}} (uint8\+\_\+t by\+BD\+\_\+day, uint8\+\_\+t by\+BD\+\_\+month, uint8\+\_\+t by\+Day, uint8\+\_\+t by\+Month, uint16\+\_\+t w\+Year)
+\begin{DoxyCompactList}\small\item\em Returns the number of days left to a birtday. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\+\_\+digit}} \mbox{\hyperlink{dates_8h_ab2415801c5e21cbb7ae280d91e8cd0be}{e\+Add\+\_\+minutes}} (uint8\+\_\+t by\+Minutes)
+\begin{DoxyCompactList}\small\item\em Used to add the minutes counted by the timer to the g\+\_\+by\+Minute variable. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{dates_8h_ab85442da01b601dd54eca57f2abbdc96}{by\+Update\+\_\+time}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}by\+Time, uint8\+\_\+t \texorpdfstring{$\ast$}{*}by\+P\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Used to update the time variables when collecting data from the GPS and inform about the amount of data that needs updating on the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dates_8h_a3943937d18a80821c4dc0fa5c887f8ee}{v\+Add\+\_\+day}} ()
+\begin{DoxyCompactList}\small\item\em Used to add one day to the current date and calculate the month and year (uses the global day month and year values). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{dates_8h_aefbae47a8b59454ca92bdac8764e08d0}{aby\+Month\+\_\+days\+\_\+len}} \mbox{[}12\mbox{]} = \{31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all of the functions that are used to operate with the date. 
+
+\begin{DoxyAuthor}{Author}
+Filip Zevnik 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+4.\+24 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/07-\/26 
+\end{DoxyDate}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{dates_8h_a06e8dc147401102b578c50a79e257259}\index{dates.h@{dates.h}!Update\_digit@{Update\_digit}}
+\index{Update\_digit@{Update\_digit}!dates.h@{dates.h}}
+\doxysubsubsection{\texorpdfstring{Update\_digit}{Update\_digit}}
+{\footnotesize\ttfamily \label{dates_8h_a06e8dc147401102b578c50a79e257259} 
+enum \mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\+\_\+digit}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MINUTE@{MINUTE}!dates.h@{dates.h}}\index{dates.h@{dates.h}!MINUTE@{MINUTE}}}\Hypertarget{dates_8h_a06e8dc147401102b578c50a79e257259a26f8ff0cdd909ee179a0ed06adfc4a0b}\label{dates_8h_a06e8dc147401102b578c50a79e257259} 
+MINUTE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_MINUTE@{TWO\_MINUTE}!dates.h@{dates.h}}\index{dates.h@{dates.h}!TWO\_MINUTE@{TWO\_MINUTE}}}\Hypertarget{dates_8h_a06e8dc147401102b578c50a79e257259a74ec855bc5a425821f2ecde17a0c4bac}\label{dates_8h_a06e8dc147401102b578c50a79e257259} 
+TWO\+\_\+\+MINUTE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HOUR@{HOUR}!dates.h@{dates.h}}\index{dates.h@{dates.h}!HOUR@{HOUR}}}\Hypertarget{dates_8h_a06e8dc147401102b578c50a79e257259a79aab2da0ce6d416b78895cf20661b35}\label{dates_8h_a06e8dc147401102b578c50a79e257259} 
+HOUR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_HOUR@{TWO\_HOUR}!dates.h@{dates.h}}\index{dates.h@{dates.h}!TWO\_HOUR@{TWO\_HOUR}}}\Hypertarget{dates_8h_a06e8dc147401102b578c50a79e257259a4618a30a3139b0f3f8943e035a2946fd}\label{dates_8h_a06e8dc147401102b578c50a79e257259} 
+TWO\+\_\+\+HOUR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALL@{ALL}!dates.h@{dates.h}}\index{dates.h@{dates.h}!ALL@{ALL}}}\Hypertarget{dates_8h_a06e8dc147401102b578c50a79e257259ab1d5eac4b1dca480c8056eaea7663b7a}\label{dates_8h_a06e8dc147401102b578c50a79e257259} 
+ALL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dates_8h_a8cbf39ede0cfd31ed7d9e7b821fdabd8}\index{dates.h@{dates.h}!bLeap\_year@{bLeap\_year}}
+\index{bLeap\_year@{bLeap\_year}!dates.h@{dates.h}}
+\doxysubsubsection{\texorpdfstring{bLeap\_year()}{bLeap\_year()}}
+{\footnotesize\ttfamily \label{dates_8h_a8cbf39ede0cfd31ed7d9e7b821fdabd8} 
+uint8\+\_\+t b\+Leap\+\_\+year (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{w\+Year}{}\end{DoxyParamCaption})}
+
+
+
+Returns 1 if the given year is a leap year and 0 if it is not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w\+Year} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\end{DoxyReturn}
+\Hypertarget{dates_8h_a3358102b1e43d0958c75c16b6399c736}\index{dates.h@{dates.h}!bSummer\_time@{bSummer\_time}}
+\index{bSummer\_time@{bSummer\_time}!dates.h@{dates.h}}
+\doxysubsubsection{\texorpdfstring{bSummer\_time()}{bSummer\_time()}}
+{\footnotesize\ttfamily \label{dates_8h_a3358102b1e43d0958c75c16b6399c736} 
+uint8\+\_\+t b\+Summer\+\_\+time (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{w\+Year}{, }\item[{uint8\+\_\+t}]{by\+Month}{, }\item[{uint8\+\_\+t}]{by\+Day}{}\end{DoxyParamCaption})}
+
+
+
+Returns a 1 if the given date is in the summer time and 0 if it is not. 
+
+This functions is used when displaying the time the GPS provides.
+
+
+\begin{DoxyParams}{Parameters}
+{\em w\+Year} & \\
+\hline
+{\em by\+Month} & \\
+\hline
+{\em by\+Day} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{dates_8h_abc1f39f536ac34f8e9f2635eea7b2b66}\index{dates.h@{dates.h}!byDay\_of\_week@{byDay\_of\_week}}
+\index{byDay\_of\_week@{byDay\_of\_week}!dates.h@{dates.h}}
+\doxysubsubsection{\texorpdfstring{byDay\_of\_week()}{byDay\_of\_week()}}
+{\footnotesize\ttfamily \label{dates_8h_abc1f39f536ac34f8e9f2635eea7b2b66} 
+uint8\+\_\+t by\+Day\+\_\+of\+\_\+week (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Month}{, }\item[{uint8\+\_\+t}]{by\+Day}{, }\item[{uint16\+\_\+t}]{w\+Year}{}\end{DoxyParamCaption})}
+
+
+
+Returns the day of the week given a date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+Month} & \\
+\hline
+{\em by\+Day} & \\
+\hline
+{\em w\+Year} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\end{DoxyReturn}
+\Hypertarget{dates_8h_ab85442da01b601dd54eca57f2abbdc96}\index{dates.h@{dates.h}!byUpdate\_time@{byUpdate\_time}}
+\index{byUpdate\_time@{byUpdate\_time}!dates.h@{dates.h}}
+\doxysubsubsection{\texorpdfstring{byUpdate\_time()}{byUpdate\_time()}}
+{\footnotesize\ttfamily \label{dates_8h_ab85442da01b601dd54eca57f2abbdc96} 
+uint8\+\_\+t by\+Update\+\_\+time (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{by\+Time}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{by\+P\+\_\+time}{}\end{DoxyParamCaption})}
+
+
+
+Used to update the time variables when collecting data from the GPS and inform about the amount of data that needs updating on the display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+Time} & \\
+\hline
+{\em by\+P\+\_\+time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\end{DoxyReturn}
+\Hypertarget{dates_8h_ab2415801c5e21cbb7ae280d91e8cd0be}\index{dates.h@{dates.h}!eAdd\_minutes@{eAdd\_minutes}}
+\index{eAdd\_minutes@{eAdd\_minutes}!dates.h@{dates.h}}
+\doxysubsubsection{\texorpdfstring{eAdd\_minutes()}{eAdd\_minutes()}}
+{\footnotesize\ttfamily \label{dates_8h_ab2415801c5e21cbb7ae280d91e8cd0be} 
+\mbox{\hyperlink{dates_8h_a06e8dc147401102b578c50a79e257259}{Update\+\_\+digit}} e\+Add\+\_\+minutes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+Minutes}{}\end{DoxyParamCaption})}
+
+
+
+Used to add the minutes counted by the timer to the g\+\_\+by\+Minute variable. 
+
+This function also calculates the minute, hour, day, and month overflow.
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+Minutes} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t The number of digits the need to be updated. 
+\end{DoxyReturn}
+\Hypertarget{dates_8h_a3943937d18a80821c4dc0fa5c887f8ee}\index{dates.h@{dates.h}!vAdd\_day@{vAdd\_day}}
+\index{vAdd\_day@{vAdd\_day}!dates.h@{dates.h}}
+\doxysubsubsection{\texorpdfstring{vAdd\_day()}{vAdd\_day()}}
+{\footnotesize\ttfamily \label{dates_8h_a3943937d18a80821c4dc0fa5c887f8ee} 
+void v\+Add\+\_\+day (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Used to add one day to the current date and calculate the month and year (uses the global day month and year values). 
+
+\Hypertarget{dates_8h_ad82e81f32bca7801597f49f03cf86639}\index{dates.h@{dates.h}!wDay\_diff@{wDay\_diff}}
+\index{wDay\_diff@{wDay\_diff}!dates.h@{dates.h}}
+\doxysubsubsection{\texorpdfstring{wDay\_diff()}{wDay\_diff()}}
+{\footnotesize\ttfamily \label{dates_8h_ad82e81f32bca7801597f49f03cf86639} 
+uint16\+\_\+t w\+Day\+\_\+diff (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{by\+BD\+\_\+day}{, }\item[{uint8\+\_\+t}]{by\+BD\+\_\+month}{, }\item[{uint8\+\_\+t}]{by\+Day}{, }\item[{uint8\+\_\+t}]{by\+Month}{, }\item[{uint16\+\_\+t}]{w\+Year}{}\end{DoxyParamCaption})}
+
+
+
+Returns the number of days left to a birtday. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em by\+BD\+\_\+day} & The birthday day. \\
+\hline
+{\em by\+BD\+\_\+month} & The birthday month. \\
+\hline
+{\em by\+Day} & \\
+\hline
+{\em by\+Month} & \\
+\hline
+{\em w\+Year} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{dates_8h_aefbae47a8b59454ca92bdac8764e08d0}\index{dates.h@{dates.h}!abyMonth\_days\_len@{abyMonth\_days\_len}}
+\index{abyMonth\_days\_len@{abyMonth\_days\_len}!dates.h@{dates.h}}
+\doxysubsubsection{\texorpdfstring{abyMonth\_days\_len}{abyMonth\_days\_len}}
+{\footnotesize\ttfamily \label{dates_8h_aefbae47a8b59454ca92bdac8764e08d0} 
+const uint8\+\_\+t aby\+Month\+\_\+days\+\_\+len\mbox{[}12\mbox{]} = \{31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31\}}
+

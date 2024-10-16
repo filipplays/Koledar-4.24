@@ -1,0 +1,156 @@
+\doxysection{communication.\+h File Reference}
+\hypertarget{communication_8h}{}\label{communication_8h}\index{communication.h@{communication.h}}
+
+
+Used for communication with the KOLEDAR GUI 2.\+24 software.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{communication_8h_ab78a1ae753147d483c4471296ab4bfc8}{TMP\+\_\+\+STR\+\_\+\+LEN}}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{communication_8h_a4b5551304712d10cb38f814ec54b5427}{Serial\+\_\+state}} \{ \mbox{\hyperlink{communication_8h_a4b5551304712d10cb38f814ec54b5427a79a322ccb4b29b85b3cab52dbccefd17}{WAIT}}
+, \mbox{\hyperlink{communication_8h_a4b5551304712d10cb38f814ec54b5427a5513a608356e09f6d778f60437ebec86}{WRITE\+\_\+\+BD}}
+, \mbox{\hyperlink{communication_8h_a4b5551304712d10cb38f814ec54b5427ab2f0cd22b1963becef8b91d29d567fe8}{TEST}}
+, \mbox{\hyperlink{communication_8h_a4b5551304712d10cb38f814ec54b5427a43e68526f5061906bebee556814172c3}{SHOW\+\_\+\+PROFILE}}
+ \}
+\item 
+enum \mbox{\hyperlink{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40}{Serial\+\_\+substate}} \{ \newline
+\mbox{\hyperlink{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40afa5b7ecc3c6a4c1e70b6ae8b52e24828}{SUB\+\_\+\+AMOUNT}}
+, \mbox{\hyperlink{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40a59d876e9a50884a83ed22875840cf5b6}{SUB\+\_\+\+NAME\+\_\+\+SURNAME}}
+, \mbox{\hyperlink{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40a6b846cabdccf1cd7bcdfdb2d6336efd2}{SUB\+\_\+\+DATE}}
+, \mbox{\hyperlink{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40a95196a3730a8818c54cd9398e9df43e3}{SUB\+\_\+\+COLOR}}
+, \newline
+\mbox{\hyperlink{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40af5614e451610b3370f264c64e702e6e9}{SUB\+\_\+\+BRIGHTNESS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{communication_8h_a59ef2f6bd263e6df743c5322ae0e905b}{v\+Handle\+\_\+serial}} ()
+\begin{DoxyCompactList}\small\item\em Handles all of the serial communication with the Koledar GUI desktop app. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{communication_8h_ad666f761607535db286f65660e03c39d}{s\+Tmp\+\_\+\+Name\+\_\+surname}} \mbox{[}41\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{communication_8h_a0e611276e203157c128641f066875839}{by\+BG\+\_\+color}} \mbox{[}3\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{communication_8h_a52be77a6e2d3f933d4675c1623f3ea8d}{by\+Text\+\_\+color}} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used for communication with the KOLEDAR GUI 2.\+24 software. 
+
+\begin{DoxyAuthor}{Author}
+Filip Zevnik 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+4.\+24 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/08-\/02 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{communication_8h_ab78a1ae753147d483c4471296ab4bfc8}\index{communication.h@{communication.h}!TMP\_STR\_LEN@{TMP\_STR\_LEN}}
+\index{TMP\_STR\_LEN@{TMP\_STR\_LEN}!communication.h@{communication.h}}
+\doxysubsubsection{\texorpdfstring{TMP\_STR\_LEN}{TMP\_STR\_LEN}}
+{\footnotesize\ttfamily \label{communication_8h_ab78a1ae753147d483c4471296ab4bfc8} 
+\#define TMP\+\_\+\+STR\+\_\+\+LEN~50}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{communication_8h_a4b5551304712d10cb38f814ec54b5427}\index{communication.h@{communication.h}!Serial\_state@{Serial\_state}}
+\index{Serial\_state@{Serial\_state}!communication.h@{communication.h}}
+\doxysubsubsection{\texorpdfstring{Serial\_state}{Serial\_state}}
+{\footnotesize\ttfamily \label{communication_8h_a4b5551304712d10cb38f814ec54b5427} 
+enum \mbox{\hyperlink{communication_8h_a4b5551304712d10cb38f814ec54b5427}{Serial\+\_\+state}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAIT@{WAIT}!communication.h@{communication.h}}\index{communication.h@{communication.h}!WAIT@{WAIT}}}\Hypertarget{communication_8h_a4b5551304712d10cb38f814ec54b5427a79a322ccb4b29b85b3cab52dbccefd17}\label{communication_8h_a4b5551304712d10cb38f814ec54b5427} 
+WAIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WRITE\_BD@{WRITE\_BD}!communication.h@{communication.h}}\index{communication.h@{communication.h}!WRITE\_BD@{WRITE\_BD}}}\Hypertarget{communication_8h_a4b5551304712d10cb38f814ec54b5427a5513a608356e09f6d778f60437ebec86}\label{communication_8h_a4b5551304712d10cb38f814ec54b5427} 
+WRITE\+\_\+\+BD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST@{TEST}!communication.h@{communication.h}}\index{communication.h@{communication.h}!TEST@{TEST}}}\Hypertarget{communication_8h_a4b5551304712d10cb38f814ec54b5427ab2f0cd22b1963becef8b91d29d567fe8}\label{communication_8h_a4b5551304712d10cb38f814ec54b5427} 
+TEST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHOW\_PROFILE@{SHOW\_PROFILE}!communication.h@{communication.h}}\index{communication.h@{communication.h}!SHOW\_PROFILE@{SHOW\_PROFILE}}}\Hypertarget{communication_8h_a4b5551304712d10cb38f814ec54b5427a43e68526f5061906bebee556814172c3}\label{communication_8h_a4b5551304712d10cb38f814ec54b5427} 
+SHOW\+\_\+\+PROFILE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40}\index{communication.h@{communication.h}!Serial\_substate@{Serial\_substate}}
+\index{Serial\_substate@{Serial\_substate}!communication.h@{communication.h}}
+\doxysubsubsection{\texorpdfstring{Serial\_substate}{Serial\_substate}}
+{\footnotesize\ttfamily \label{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40} 
+enum \mbox{\hyperlink{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40}{Serial\+\_\+substate}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB\_AMOUNT@{SUB\_AMOUNT}!communication.h@{communication.h}}\index{communication.h@{communication.h}!SUB\_AMOUNT@{SUB\_AMOUNT}}}\Hypertarget{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40afa5b7ecc3c6a4c1e70b6ae8b52e24828}\label{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40} 
+SUB\+\_\+\+AMOUNT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB\_NAME\_SURNAME@{SUB\_NAME\_SURNAME}!communication.h@{communication.h}}\index{communication.h@{communication.h}!SUB\_NAME\_SURNAME@{SUB\_NAME\_SURNAME}}}\Hypertarget{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40a59d876e9a50884a83ed22875840cf5b6}\label{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40} 
+SUB\+\_\+\+NAME\+\_\+\+SURNAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB\_DATE@{SUB\_DATE}!communication.h@{communication.h}}\index{communication.h@{communication.h}!SUB\_DATE@{SUB\_DATE}}}\Hypertarget{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40a6b846cabdccf1cd7bcdfdb2d6336efd2}\label{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40} 
+SUB\+\_\+\+DATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB\_COLOR@{SUB\_COLOR}!communication.h@{communication.h}}\index{communication.h@{communication.h}!SUB\_COLOR@{SUB\_COLOR}}}\Hypertarget{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40a95196a3730a8818c54cd9398e9df43e3}\label{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40} 
+SUB\+\_\+\+COLOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB\_BRIGHTNESS@{SUB\_BRIGHTNESS}!communication.h@{communication.h}}\index{communication.h@{communication.h}!SUB\_BRIGHTNESS@{SUB\_BRIGHTNESS}}}\Hypertarget{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40af5614e451610b3370f264c64e702e6e9}\label{communication_8h_aadf8d7d23c1d0c807d351d3509f26d40} 
+SUB\+\_\+\+BRIGHTNESS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{communication_8h_a59ef2f6bd263e6df743c5322ae0e905b}\index{communication.h@{communication.h}!vHandle\_serial@{vHandle\_serial}}
+\index{vHandle\_serial@{vHandle\_serial}!communication.h@{communication.h}}
+\doxysubsubsection{\texorpdfstring{vHandle\_serial()}{vHandle\_serial()}}
+{\footnotesize\ttfamily \label{communication_8h_a59ef2f6bd263e6df743c5322ae0e905b} 
+void v\+Handle\+\_\+serial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles all of the serial communication with the Koledar GUI desktop app. 
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{communication_8h_a0e611276e203157c128641f066875839}\index{communication.h@{communication.h}!byBG\_color@{byBG\_color}}
+\index{byBG\_color@{byBG\_color}!communication.h@{communication.h}}
+\doxysubsubsection{\texorpdfstring{byBG\_color}{byBG\_color}}
+{\footnotesize\ttfamily \label{communication_8h_a0e611276e203157c128641f066875839} 
+uint8\+\_\+t by\+BG\+\_\+color\mbox{[}3\mbox{]}}
+
+\Hypertarget{communication_8h_a52be77a6e2d3f933d4675c1623f3ea8d}\index{communication.h@{communication.h}!byText\_color@{byText\_color}}
+\index{byText\_color@{byText\_color}!communication.h@{communication.h}}
+\doxysubsubsection{\texorpdfstring{byText\_color}{byText\_color}}
+{\footnotesize\ttfamily \label{communication_8h_a52be77a6e2d3f933d4675c1623f3ea8d} 
+uint8\+\_\+t by\+Text\+\_\+color\mbox{[}3\mbox{]}}
+
+\Hypertarget{communication_8h_ad666f761607535db286f65660e03c39d}\index{communication.h@{communication.h}!sTmp\_Name\_surname@{sTmp\_Name\_surname}}
+\index{sTmp\_Name\_surname@{sTmp\_Name\_surname}!communication.h@{communication.h}}
+\doxysubsubsection{\texorpdfstring{sTmp\_Name\_surname}{sTmp\_Name\_surname}}
+{\footnotesize\ttfamily \label{communication_8h_ad666f761607535db286f65660e03c39d} 
+char s\+Tmp\+\_\+\+Name\+\_\+surname\mbox{[}41\mbox{]}}
+
