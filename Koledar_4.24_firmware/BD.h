@@ -65,7 +65,7 @@ public:
    * @param byMonth
    * @param byYear
    */
-  void BD::vCopy(uint8_t abyName_surname[25], uint8_t *byDay, uint8_t *byMonth, uint8_t *byYear);
+  void vCopy(uint8_t abyName_surname[25], uint8_t *byDay, uint8_t *byMonth, uint8_t *byYear);
   /**
    * @brief Formats the encoded name and surname along with the date information and calculated age and saves
    * it to the sOut paramater string.
