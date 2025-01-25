@@ -181,15 +181,15 @@ uint16_t BD::wDays_till_BD(uint8_t byDay, uint8_t byMonth, uint16_t wYear)
   return wDay_diff(this->byDay, this->byMonth, byDay, byMonth, wYear);
 }
 
-void BD::vCopy(uint8_t abyName_surname[25], uint8_t byDay, uint8_t byMonth, uint8_t byYear)
+void BD::vCopy(uint8_t abyName_surname[25], uint8_t *byDay, uint8_t *byMonth, uint8_t *byYear)
 {
   memcpy(abyName_surname, this->abyName_surname, 25);
-  byDay = this->byDay;
-  byMonth = this->byMonth;
-  byYear = this->byYear;
+  *byDay = this->byDay;
+  *byMonth = this->byMonth;
+  *byYear = this->byYear;
 }
 
-BD BD::operator=(BD *BD_Add)
+void BD::operator=(BD *BD_Add)
 {
-  BD_Add->vCopy(this->abyName_surname, this->byDay, this->byMonth, this->byYear);
+  BD_Add->vCopy(this->abyName_surname, &this->byDay, &this->byMonth, &this->byYear);
 }

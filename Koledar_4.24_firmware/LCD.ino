@@ -326,12 +326,12 @@ void vDisplay_char(char cChar, uint16_t xPos, uint16_t yPos)
     vChar_stroke(h, xPos, yPos);
     break;
   case 'i':
-    vChar_fill(i, xPos, yPos);
-    vChar_stroke(i, xPos, yPos);
+    vChar_fill(_i, xPos, yPos);
+    vChar_stroke(_i, xPos, yPos);
     break;
   case 'j':
-    vChar_fill(j, xPos, yPos);
-    vChar_stroke(j, xPos, yPos);
+    vChar_fill(_j, xPos, yPos);
+    vChar_stroke(_j, xPos, yPos);
     break;
   case 'k':
     vChar_fill(k, xPos, yPos);

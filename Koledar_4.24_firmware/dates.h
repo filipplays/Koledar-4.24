@@ -20,7 +20,7 @@ enum Update_digit
     ALL
 };
 
-const uint8_t abyMonth_days_len[12] = {31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+const uint8_t abyMonth_days_len[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
 /**
  * @brief Returns 1 if the given year is a leap year and 0 if it is not.
