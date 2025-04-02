@@ -160,11 +160,11 @@ void setup()
     g_wYear = 2024;
     g_byHour = 11;
     g_byMinute = 30;
-    g_byP_day = 20;
-    g_byP_month = 11;
-    g_wP_year = 2024;
-    g_byP_hour = 11;
-    g_byP_minute = 30;
+    g_byP_day = g_byDay;
+    g_byP_month = g_byMonth;
+    g_wP_year = g_wYear;
+    g_byP_hour = g_byHour;
+    g_byP_minute = g_byMinute;
     g_byTimer_mins = 0;
     vPick_screen(ALL);
 #endif

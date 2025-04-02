@@ -145,9 +145,13 @@ void BD::vFormat(char *sOut)
   uint8_t bYear_string_index = 0;
 
   if (byAge > 4 || byAge == 0)
+  {
     bYear_string_index = 0;
-  else
+  }else
+  {
+    if(byAge == 4) byAge = 3;
     bYear_string_index = byAge;
+  }
 
   sprintf(sOut, "%s %d.%d. %d %s", sTitle, this->byDay, this->byMonth, byAge, asYear_strings[bYear_string_index]);
 }
